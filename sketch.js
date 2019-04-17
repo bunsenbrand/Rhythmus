@@ -345,10 +345,18 @@ function keyPressed() {
         right.l = right.l *1.8;
         body.l = 20;
     }
+}
 
-    
+function mousePressed() {
 
-
+    if (mouseX <= canvasw/2 && left.l == left.startl && right.l == right.startl) {
+        left.l = left.l *1.8;
+        body.l = -20;
+    }
+    if (mouseX > canvasw/2 && left.l == left.startl && right.l == right.startl ) {
+        right.l = right.l *1.8;
+        body.l = 20;
+    }
 }
 
 // Drop
